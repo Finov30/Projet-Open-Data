@@ -72,9 +72,9 @@ def run_pipeline():
     # ========================================
     # ÉTAPE 2 : Transformation (Aurélien)
     # ========================================
-    # TODO: Ajouter l'import et l'appel de la fonction de transformation
-    # from src.transform import main as transform_data
-    # transform_data()
+
+    from utils.transformer import run_transformations
+    run_transformations()
 
     # ========================================
     # ÉTAPE 3 : Enrichissement/Stockage (Jules)

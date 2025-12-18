@@ -7,31 +7,32 @@ Un chatbot nutritionnel complète l’expérience en répondant aux questions su
 
 ## 🎯 Fonctionnalités
 - Feature 1
-- Feature 2
+- Les données brutes issues d’OpenFoodFacts et de la base CIQUAL sont nettoyées et normalisées (types numériques, valeurs manquantes, encodage des scores nutritionnels) afin de produire des jeux de données cohérents et directement exploitables pour l’analyse et la modélisation, sans altérer les fichiers sources raw.
 - ...
 
 ## 🛠️ Installation
 
-\`\`\`bash
+```bash
 # Cloner le repo
-git clone [https://github.com/Finov30/Projet-Open-Data]
-
+git clone https://github.com/Finov30/Projet-Open-Data
+```
 
 # Installer avec uv
+```bash
 uv sync
+```
 
 # Configurer les variables d'environnement
+```bash
 cp .env.example .env
 # Éditer .env avec vos clés API
-\`\`\`
+```
 
 ## 🚀 Lancement
 
-\`\`\`bash
+```bash
 uv run streamlit run app.py
-# ou
-uv run python app.py  # pour Gradio
-\`\`\`
+```
 
 ## 📊 Sources de données
 - [Source 1](https://openfoodfacts.github.io/openfoodfacts-server/api/) - OpenFoodFacts API : Base de produits alimentaires
