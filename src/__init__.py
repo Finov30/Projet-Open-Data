@@ -1,0 +1,1 @@
+"""NutriScan - Assistant nutrition intelligent."""
