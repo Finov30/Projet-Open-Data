@@ -39,7 +39,7 @@ def run_pipeline():
     """Exécute le pipeline complet."""
 
     # ========================================
-    # ÉTAPE 1 : Récupération des données (Sam)
+    # ÉTAPE 1 : Récupération des données
     # ========================================
     from src.data.fetch_data import fetch_openfoodfacts_products, fetch_ciqual_data, OUTPUT_DIR
 
@@ -70,24 +70,24 @@ def run_pipeline():
         print(f"  -> Sauvegardé: {ciqual_file} ({len(df_ciqual)} aliments)")
 
     # ========================================
-    # ÉTAPE 2 : Transformation (Aurélien)
+    # ÉTAPE 2 : Transformation
     # ========================================
 
     from utils.transformer import run_transformations
     run_transformations()
 
     # ========================================
-    # ÉTAPE 3 : Enrichissement/Stockage (Jules)
+    # ÉTAPE 3 : Enrichissement/Stockage
     # ========================================
     from src.enricher.enrich_data import main as enrich_data
     enrich_data()
 
     # ========================================
-    # ÉTAPE 4 : Streamlit IA/Chatbot (Juba)
+    # ÉTAPE 4 : Streamlit IA/Chatbot
     # ========================================
     # TODO: Lancer l'application Streamlit
-    # import subprocess
-    # subprocess.run(["streamlit", "run", "src/app.py"])
+    import subprocess
+    subprocess.run(["streamlit", "run", "streamlit.py"])
 
     print("\n" + "=" * 60)
     print("PIPELINE TERMINÉ")
