@@ -10,8 +10,8 @@ DATA_DIR = PROJECT_ROOT / "data"
 PROCESSED_DIR = DATA_DIR / "processed"
 ENRICHED_DIR = DATA_DIR / "enriched"
 
-OFF_CSV = PROCESSED_DIR / "off_transformed.csv"
-CIQUAL_CSV = PROCESSED_DIR / "ciqual_transformed.csv"
+OFF_CSV = PROCESSED_DIR / "openfoodfacts_products_clean.csv"
+CIQUAL_CSV = PROCESSED_DIR / "ciqual_aliments_clean.csv"
 
 OFF_PARQUET = PROCESSED_DIR / "off_transformed.parquet"
 CIQUAL_PARQUET = PROCESSED_DIR / "ciqual_transformed.parquet"
