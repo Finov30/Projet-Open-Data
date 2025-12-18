@@ -45,7 +45,7 @@ def test_litellm_import():
     
     try:
         import litellm
-        print(f"✅ SUCCÈS : LiteLLM version {litellm.__version__}")
+        # print(f"✅ SUCCÈS : LiteLLM installé (version {litellm.__version__})")
         return True
     except ImportError:
         print("❌ ÉCHEC : LiteLLM n'est pas installé")
@@ -68,7 +68,7 @@ def test_gemini_connection():
         print("Envoi d'une requête de test à Gemini Flash...")
         
         response = litellm.completion(
-            model="gemini/gemini-1.5-flash",
+            model="gemini/gemini-2.5-flash-lite",
             messages=[
                 {"role": "user", "content": "Réponds simplement 'OK' si tu me reçois"}
             ],
@@ -119,7 +119,7 @@ def test_module_ia():
         
         response = llm.complete(
             messages=[{"role": "user", "content": "Dis bonjour"}],
-            model="gemini/gemini-1.5-flash",
+            model="gemini/gemini-2.5-flash-lite",
             max_tokens=20
         )
         
@@ -140,12 +140,12 @@ def test_module_ia():
             "salt_100g": 0.1
         }
         
-        result = analyzer.analyze_product(test_product, model="gemini/gemini-1.5-flash")
+        result = analyzer.analyze(test_product, model="gemini/gemini-2.5-flash-lite")
         
         if result["success"]:
             print(f"✅ ProductAnalyzer fonctionne")
             print(f"   Analyse générée : {len(result['analysis'])} caractères")
-            print(f"   Score calculé : {result['scores']['overall_health']}/100")
+            # print(f"   Score calculé : {result['scores']['overall_health']}/100")
         else:
             print(f"⚠️  ProductAnalyzer a retourné une erreur : {result.get('error')}")
             return False

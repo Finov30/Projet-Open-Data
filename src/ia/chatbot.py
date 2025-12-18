@@ -23,7 +23,7 @@ class NutritionChatbot:
         self,
         user_message: str,
         context: Optional[Dict[str, Any]] = None,
-        model: str = "gpt-3.5-turbo",
+        model: str = "gemini-2.5-flash-lite",
         stream: bool = False
     ) -> Dict[str, Any]:
         """

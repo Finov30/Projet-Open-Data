@@ -17,7 +17,7 @@ class ProductAnalyzer:
     def analyze(
         self,
         product: Dict[str, Any],
-        model: str = "gpt-3.5-turbo"
+        model: str = "gemini-2.5-flash-lite"
     ) -> Dict[str, Any]:
         """
         Analyse complète d'un produit alimentaire.

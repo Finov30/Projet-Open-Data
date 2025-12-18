@@ -40,7 +40,7 @@ class LLMManager:
             "description": "Rapide et économique (Google Gemini)"
         },
           
-        "gemini-1.5-pro": {
+        "gemini-2.5-flash-lite": {
             "provider": "gemini",
             "cost_per_token": 0.000001,
             "description": "Analyse avancée (Google Gemini)"
@@ -126,8 +126,7 @@ class LLMManager:
             Tuple (réponse, modèle_utilisé)
         """
         if models is None:
-            models = [ "gemini/gemini-1.5-flash",
-                       "gemini/gemini-1.5-pro",
+            models = [ "gemini/gemini-2.5-flash-lite","ollama/llama3.2"
                 ]
         
         last_error = None
