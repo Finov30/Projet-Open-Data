@@ -79,9 +79,8 @@ def run_pipeline():
     # ========================================
     # ÉTAPE 3 : Enrichissement/Stockage (Jules)
     # ========================================
-    # TODO: Ajouter l'import et l'appel de la fonction d'enrichissement
-    # from src.enrichment import main as enrich_data
-    # enrich_data()
+    from src.enricher.enrich_data import main as enrich_data
+    enrich_data()
 
     # ========================================
     # ÉTAPE 4 : Streamlit IA/Chatbot (Juba)
