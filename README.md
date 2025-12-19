@@ -6,14 +6,20 @@ Grâce à l’IA, elle analyse automatiquement les informations nutritionnelles 
 Un chatbot nutritionnel complète l’expérience en répondant aux questions sur les ingrédients, additifs et allergènes.
 
 ## 🎯 Fonctionnalités
-- Feature 1
-- Les données brutes issues d’OpenFoodFacts et de la base CIQUAL sont nettoyées et normalisées (types numériques, valeurs manquantes, encodage des scores nutritionnels) afin de produire des jeux de données cohérents et directement exploitables pour l’analyse et la modélisation, sans altérer les fichiers sources raw.
-- ...
+- Import et normalisation des jeux de données bruts (OpenFoodFacts, CIQUAL).
+- Pipeline ETL pour extraction, nettoyage, enrichissement et export des données.
+- Détection automatique des types de colonnes (numériques, dates, catégorielles).
+- Interface Streamlit pour exploration des données, filtres avancés et visualisations rapides.
+- Chatbot IA utilisant les modules dans le dossier `src/ia` (gestion de modèles, prompts, analyse produit, recommandations).
+- Support pour exécuter des modèles locaux via Ollama (HTTP ou CLI).
+- Téléchargement des jeux filtrés au format CSV.
+- Tests unitaires pour les composants IA (`tests/test_ia.py`).
+- Configuration via fichier `.env` et intégration simple à la CI / packaging Python.
 
 ## 🛠️ Installation
 
 ```bash
-# Cloner le repo
+# Cloner le repog
 git clone https://github.com/Finov30/Projet-Open-Data
 ```
 
