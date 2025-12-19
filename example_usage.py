@@ -52,7 +52,7 @@ def example_1_analyze_product():
     # Analyse du produit avec Gemini
     result = analyzer.analyze_product(
         product_data=example_product,
-        model="gemini/gemini-1.5-flash"  # Modèle gratuit et rapide
+        model="gemini/gemini-2.5-flash-lite"  # Modèle gratuit et rapide
     )
     
     if result["success"]:
@@ -76,7 +76,7 @@ def example_2_compare_products():
     
     result = analyzer.compare_products(
         products=[example_product, alternative_product],
-        model="gemini/gemini-1.5-flash"
+        model="gemini/gemini-2.5-flash-lite"
     )
     
     if result["success"]:
@@ -108,7 +108,7 @@ def example_3_recommend_alternatives():
         current_product=example_product,
         alternatives=[alternative_product],
         user_preferences=user_prefs,
-        model="gemini/gemini-1.5-flash"
+        model="gemini/gemini-2.5-flash-lite"
     )
     
     if result["success"]:
@@ -145,7 +145,7 @@ def example_4_chatbot():
         result = chatbot.chat(
             user_message=question,
             context=context,
-            model="gemini/gemini-1.5-flash"
+            model="gemini/gemini-2.5-flash-lite"
         )
         
         if result["success"]:
@@ -165,7 +165,7 @@ def example_5_explain_ingredient():
     result = analyzer.explain_ingredient(
         ingredient="E476 (polyglycerol polyricinoleate)",
         context="Dans une pâte à tartiner au chocolat",
-        model="gemini/gemini-1.5-flash"
+        model="gemini/gemini-2.5-flash-lite"
     )
     
     if result["success"]:
@@ -184,7 +184,7 @@ def example_6_model_comparison():
     llm = LLMManager()
     analyzer = ProductAnalyzer(llm)
     
-    models_to_test = ["gemini/gemini-1.5-flash", "gemini/gemini-1.5-pro"]
+    models_to_test = ["gemini/gemini-2.5-flash-lite"]
     
     for model in models_to_test:
         print(f"\n🤖 Test avec {model}...")
@@ -220,7 +220,7 @@ def example_7_streaming_chatbot():
     
     result = chatbot.chat(
         user_message=question,
-        model="gemini/gemini-1.5-flash",
+        model="gemini/gemini-2.5-flash-lite",
         stream=True
     )
     

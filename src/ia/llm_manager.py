@@ -17,7 +17,7 @@ class LLMManager:
             "provider": "ollama",
             "description": "Modèle local via Ollama (sans clé API)"
         },
-        "gemini/gemini-1.5-flash": {
+        "gemini/gemini-2.5-flash-lite": {
             "provider": "gemini",
             "description": "Google Gemini (clé requise)"
         },
@@ -40,7 +40,7 @@ class LLMManager:
 
         # 2️⃣ Gemini
         if os.getenv("GEMINI_API_KEY"):
-            return "gemini/gemini-1.5-flash"
+            return "gemini/gemini-2.5-flash-lite"
 
         # 3️⃣ OpenAI
         if os.getenv("OPENAI_API_KEY"):
@@ -105,7 +105,7 @@ class LLMManager:
 
         models = models or [
             "ollama/mistral",
-            "gemini/gemini-1.5-flash",
+            "gemini/gemini-2.5-flash-lite",
             "openai/gpt-3.5-turbo",
         ]
 
